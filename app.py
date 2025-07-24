@@ -71,6 +71,7 @@ color_map = {
 }
 
 app = Dash(__name__)
+server = app.server  # 这行加在`app = Dash(__name__)`之后
 
 app.layout = html.Div([
     html.H2("摩根大通、乾坤期货与 CFTC 持仓对比", style={'textAlign': 'center'}),
@@ -193,8 +194,6 @@ def update_graphs(selected_years, selected_brokers, selected_cftc, avg_window):
 
     return children
 
-
-server = app.server  # 这行加在`app = Dash(__name__)`之后
 
 if __name__ == '__main__':
     app.run(debug=True)
