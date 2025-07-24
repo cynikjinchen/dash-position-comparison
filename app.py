@@ -193,7 +193,7 @@ def update_graphs(selected_years, selected_brokers, selected_cftc, avg_window):
 
     return children
 
-app = Dash(__name__)  # 这是Dash应用的初始化
+
 server = app.server  # 这行加在`app = Dash(__name__)`之后
 
 if __name__ == '__main__':
